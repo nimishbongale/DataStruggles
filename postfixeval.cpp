@@ -23,7 +23,8 @@ void push(int n)
 
 int main()
 {
-	start:int i=0,cn=0,pop1=0,pop2=0;
+	start:;
+	int i=0,cn=0,pop1=0,pop2=0;
 	char input;
 	top=0;
 	printf("Please enter a valid postfix expression, each token separated by a space:-\n");
