@@ -9,7 +9,7 @@
 
 int stack[SIZE];
 char user[SIZE];
-int top=0;
+int top=-1;
 
 int pop()
 {
@@ -23,10 +23,11 @@ void push(int n)
 
 int main()
 {
-	start:;
+	while(true)
+	{
 	int i=0,cn=0,pop1=0,pop2=0;
 	char input;
-	top=0;
+	top=-1;
 	printf("Please enter a valid postfix expression, each token separated by a space:-\n");
 	gets(user);//getting the string from the user
 	
@@ -45,7 +46,7 @@ int main()
 		    push(result);
 		}
 		
-		else if ((top!=0)&&((top%2==0)||((top-cn)%2==0))&&((input=='+')||(input=='-')||(input=='*')||(input=='/')||(input=='$')||(input=='^')))
+		else if ((top>1)&&((input=='+')||(input=='-')||(input=='*')||(input=='/')||(input=='$')||(input=='^')))
    		{
    			pop1=pop();
    			pop2=pop();
@@ -70,7 +71,7 @@ int main()
 			}
 			
 		   push(result);
-		   cn++;//calculating position of computed result in stack
+		   //cn++;//calculating position of computed result in stack
 	}
 	else if(input==' ');
 	else
