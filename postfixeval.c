@@ -81,7 +81,7 @@ int main()
 	}
 			i=i+1;//incrementing i to traverse the input array
 }
-	if(top==1)//print result only if a single result exists
+	if(top==0)//print result only if a single result exists
 	printf("Result=%d",pop());
 	else 
 	{
