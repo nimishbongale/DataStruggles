@@ -9,7 +9,7 @@
 
 int stack[SIZE];
 char user[SIZE];
-int top=-1;
+int top=0;
 
 int pop()
 {
@@ -23,6 +23,7 @@ void push(int n)
 
 int main()
 {
+	start:;
 	while(true)
 	{
 	int i=0,cn=0,pop1=0,pop2=0;
