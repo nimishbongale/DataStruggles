@@ -19,10 +19,10 @@ void enQueue(int ele)
         rear = 0;
         else 
         ++rear;
-    }
+
        myCQ[rear] = ele;
    }
-   
+}   
       
 void deQueue()
 {
