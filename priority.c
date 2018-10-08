@@ -54,7 +54,7 @@ void display()
 int main()
 {
 
-    int element, choice,l; 
+    int element, choice; 
 	while (1)
 	{
 		printf("\n1.Insert\n2.Delete\n3.Display\nEnter anything else to exit");
