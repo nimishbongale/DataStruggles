@@ -14,7 +14,7 @@ int rear = -1;
 
 int main()
 {
-    int element, choice;
+    int element, choice; 
     
     printf("\n1 - Insert an element into queue");
     printf("\n2 - Delete an element from queue");
