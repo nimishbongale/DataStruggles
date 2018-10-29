@@ -66,7 +66,6 @@ void DeleteEnd()
 {
 	if(head->link==NULL)
 	{
-	printf("Yes");
 	free(head);
 	head=NULL;
 }
