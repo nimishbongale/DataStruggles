@@ -54,12 +54,12 @@ void display()
         }
         else
         {
+		 for (i = front;i <= SIZE - 1; i++) 
+			printf("%d\t", myCQ[i]);
+		
             for (i = 0;i <= rear; i++) 
 			printf("%d\t",myCQ[i]);
-            
-            for (i = front;i <= SIZE - 1; i++) 
-			printf("%d\t", myCQ[i]);
-        }
+            }
     }
 
 
