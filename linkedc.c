@@ -64,6 +64,7 @@ void DeleteBegin()
 
 void DeleteEnd()
 {
+	
 	if(head->link==NULL)
 	{
 	free(head);
