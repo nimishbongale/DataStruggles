@@ -19,8 +19,6 @@ void display()
 }
 struct node *newNode(int item) 
 { 
-	if(item==-1)
-	return NULL;
     struct node *temp =  (struct node *)malloc(sizeof(struct node)); 
     temp->key = item; 
     temp->left = temp->right = NULL; 
@@ -131,7 +129,6 @@ int main()
 {
    	int a,ch;
 	struct node *ptr;
-	printf("Enter elements (-1 to terminate)");
     while(1)
 	{
 		printf("\n1.Insert\n2.Search\n3.Delete\n4.Display\nEnter anything else to exit");
