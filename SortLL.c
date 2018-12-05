@@ -10,7 +10,6 @@ struct node *create(int x)
 { struct node *newnode;
 	newnode=(struct node *)malloc(sizeof(struct node));
 	newnode->a=x;
-	;
 	newnode->next=NULL;
     return newnode;
 
