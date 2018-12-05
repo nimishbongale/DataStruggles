@@ -19,9 +19,9 @@ struct node *create(int x)
 void insert()
 {   
     int a;
-	printf("\nEnter number: ");
-				        scanf("%d",&a);
-				        
+	printf("\nEnter number");
+	scanf("%d",&a);
+				       
 	if(head==NULL)
 	{
 		head=create(a);
