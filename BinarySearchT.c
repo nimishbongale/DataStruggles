@@ -7,76 +7,12 @@ struct node
     struct node *left, *right; 
 }*root=NULL; 
    
-void display()
-{
-	printf("\nPreorder:");	
-	preorder(root);
-	printf("\nInorder:");	
-	inorder(root);
-	printf("\nPostorder:");	
-	postorder(root);
-	
-}
 struct node *newNode(int item) 
 { 
     struct node *temp =  (struct node *)malloc(sizeof(struct node)); 
     temp->key = item; 
     temp->left = temp->right = NULL; 
     return temp; 
-} 
-
-struct node * minValueNode(struct node* node) 
-{ 
-    struct node* current = node; 
-  
-    while (current->left != NULL) 
-        current = current->left; 
-  
-    return current; 
-} 
-
-struct node* deleteNode(struct node* root, int key) 
-{ 
-    if (root == NULL) return root; 
- 
-    if (key < root->key) 
-        root->left = deleteNode(root->left, key); 
-  
-    else if (key > root->key) 
-        root->right = deleteNode(root->right, key); 
-  
-    else
-    { 
-        
-        if (root->left == NULL) 
-        { 
-            struct node *temp = root->right; 
-            free(root); 
-            return temp; 
-        } 
-        else if (root->right == NULL) 
-        { 
-            struct node *temp = root->left; 
-            free(root); 
-            return temp; 
-        } 
-  
-       
-        struct node* temp = minValueNode(root->right); 
-  	root->key = temp->key; 
-  	root->right = deleteNode(root->right, temp->key); 
-    } 
-    return root; 
-} 
-struct node* search(struct node* root, int key) 
-{ 
-    if (root == NULL || root->key == key) 
-       return root; 
-     
-    if (root->key < key) 
-       return search(root->right, key); 
- 
-    return search(root->left, key); 
 } 
 
 void preorder(struct node *root)
@@ -109,20 +45,27 @@ void postorder(struct node *root)
     }
 }
 
-
+void display()
+{
+	printf("\nPreorder:");	
+	preorder(root);
+	printf("\nInorder:");	
+	inorder(root);
+	printf("\nPostorder:");	
+	postorder(root);
+	
+}
    
 struct node* insert(struct node* node, int key) 
 { 
     if (node == NULL) return newNode(key); 
   
-   
-    if (key < node->key) 
+   if (key < node->key) 
         node->left  = insert(node->left, key); 
     else if (key > node->key) 
         node->right = insert(node->right, key);    
   
-  
-    return node; 
+ 	return node; 
 } 
    
 int main() 
@@ -131,7 +74,7 @@ int main()
 	struct node *ptr;
     while(1)
 	{
-		printf("\n1.Insert\n2.Search\n3.Delete\n4.Display\nEnter anything else to exit");
+		printf("\n1.Insert\n2.Display\nEnter anything else to exit");
 		scanf("%d",&ch);
 		switch(ch)
 		{
@@ -141,33 +84,12 @@ int main()
 				root=insert(root,a);
 				break;
 				
-				case 2:
-						printf("\nEnter element to be searched: ");
-						scanf("%d",&a);
-						ptr=search(root,a);
-						if(ptr==NULL)
-						printf("\nNode not found!");
-							else
-						printf("\nNode found!");
-						break;
-						
-						case 3:
-								printf("\nEnter element to be deleted: ");
-								scanf("%d",&a);
-								ptr=deleteNode(root,a);
-								if(ptr==NULL)
-						printf("\nNode not found!");
-							else
-						printf("\nNode found!");
-						break;
-						
-						case 4:
-							display();
-							break;
+			case 2:
+				display();
+				break;
 							
-							default:
-								exit(0);
-	
+						default:
+						exit(0);
 		}
 	}
   return 0; 
