@@ -79,7 +79,7 @@ int main()
 	
 	while(1)
 		{
-			printf("\n1.Insert\n2.Sort\n3.Display\nEnter anything else to exit: ");
+			printf("\n1.Insert\n2.Display\nEnter anything else to exit: ");
 			scanf("%d",&q);
 			switch(q)
 			{
@@ -87,10 +87,6 @@ int main()
                        insert();
                        break;
                 case 2:
-                       sort();
-
-                       break;
-                case 3:
                        display();
                        break;
                 default:
