@@ -1,14 +1,20 @@
+/*
+Author @nimishbongale
+Version 1.0.3
+Date DD/MM/YYYY
+A program which performs insertion in a sorted DLL  
+*/
 #include<stdio.h>
 #include<stdlib.h>
 
-struct node
+struct node//declaring a structure
 { 
 struct node *prev;
 int a;
 struct node *next;
 }*head=NULL,*ptr=NULL,*tail=NULL,*newNode=NULL;
 
-struct node *create(int x)
+struct node *create(int x)//function to create and return a node
 { 
 	newNode=(struct node *)malloc(sizeof(struct node));
 	newNode->a=x;
@@ -17,14 +23,14 @@ struct node *create(int x)
     return newNode;
 }
 
-void swap(struct node *b,struct node *c) 
+void swap(struct node *b,struct node *c) //to swap only the elements
 { 
     int temp = b->a; 
     b->a = c->a; 
     c->a = temp; 
 } 
 
-void sort()
+void sort()//arrange the list
 { int temp,p;
 	ptr=head;
 	do{  p=0; 
@@ -42,7 +48,7 @@ void sort()
 	
 }
 
-void insert()
+void insert()//add data 
 {   
     int a;
 	printf("\nEnter number: ");
@@ -64,7 +70,7 @@ void insert()
 }
 
 
-void display()
+void display()//print the data
 {
 	printf("\nCurrent Double linked list:\n ");
 
@@ -73,7 +79,7 @@ void display()
     printf("%d->", ptr->a);
 }
 
-int main()
+int main()//driver function 
 {
 	int q;
 	
