@@ -1,13 +1,19 @@
+/*
+Author @nimishbongale
+Version 1.0.4
+Date DD/MM/YYYY
+A program which demonstrates the concept of Binary Search Tree  
+*/
 #include<stdio.h>
 #include<stdlib.h>
 
-struct node 
+struct node //declaring the structure
 { 
     int key; 
     struct node *left, *right; 
 }*root=NULL; 
    
-struct node *newNode(int item) 
+struct node *newNode(int item) //creating and returning the newnode
 { 
     struct node *temp =  (struct node *)malloc(sizeof(struct node)); 
     temp->key = item; 
@@ -15,7 +21,7 @@ struct node *newNode(int item)
     return temp; 
 } 
 
-void preorder(struct node *root)
+void preorder(struct node *root)//printing in preorder format
 {
     if (root != NULL)
     {
@@ -25,7 +31,7 @@ void preorder(struct node *root)
     }
 }
 
-void inorder(struct node *root) 
+void inorder(struct node *root) //printing in inorder format
 { 
     if (root != NULL) 
     { 
@@ -35,7 +41,7 @@ void inorder(struct node *root)
     } 
 } 
 
-void postorder(struct node *root)
+void postorder(struct node *root)//printing in postorder format
 {
     if (root != NULL)
     {
@@ -45,7 +51,7 @@ void postorder(struct node *root)
     }
 }
 
-void display()
+void display()//printing the tree
 {
 	printf("\nPreorder:");	
 	preorder(root);
@@ -56,7 +62,7 @@ void display()
 	
 }
    
-struct node* insert(struct node* node, int key) 
+struct node* insert(struct node* node, int key) //add element
 { 
     if (node == NULL) return newNode(key); 
   
@@ -68,7 +74,7 @@ struct node* insert(struct node* node, int key)
  	return node; 
 } 
    
-int main() 
+int main() //driver function 
 {
    	int a,ch;
 	struct node *ptr;
