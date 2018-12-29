@@ -2,7 +2,7 @@
 Author @nimishbongale
 Version 1.0.1
 Date DD/MM/YYYY
-A program which evauates a postfix expression  
+A program which solve the TOH problem  
 */
 #include <stdio.h>
 
