@@ -1,8 +1,14 @@
+/*
+Author @nimishbongale
+Version 1.0.2
+Date DD/MM/YYYY
+A program which forms and evaluates an expression tree  
+*/
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
 
-struct tree
+struct tree//declaring the tree structure
 {
     char data; 
     struct tree *left,*right;
@@ -10,17 +16,17 @@ struct tree
 
 int top=-1;
 
-void push(struct tree* node)
+void push(struct tree* node)//insert into pointer stack 
 {
     stack[++top]=node;
 }
 
-struct tree * pop()
+struct tree * pop()//delete from pointer stack
 {
     return(stack[top--]);
 }
 
-int check(char ch)
+int check(char ch)//check if operator or operand 
 {
     if(ch=='+'||ch=='-'||ch=='/'||ch=='*')
         return 2;
@@ -28,7 +34,7 @@ int check(char ch)
         return 1;
 }
 
-int cal(struct tree *node)
+int cal(struct tree *node)//function to calculate result 
 {
     int ch;
     ch=check(node->data);
@@ -50,7 +56,7 @@ int cal(struct tree *node)
         return 0;
 }
 
-void inorder(struct tree *node)
+void inorder(struct tree *node)//print inorder form of expression 
 {
     if(node!=NULL)
     {
@@ -60,7 +66,7 @@ void inorder(struct tree *node)
     }
 }
 
-void operand(char b)
+void operand(char b)//called function if char is operand 
 {
     node=(struct tree*)malloc(sizeof(struct tree));
     node->data=b;
@@ -69,7 +75,7 @@ void operand(char b)
     push(node);
 }
 
-void operators(char a)
+void operators(char a)//called function if char is operator 
 {
     node=(struct tree*)malloc(sizeof(struct tree));
     node->data=a;
@@ -78,7 +84,7 @@ void operators(char a)
     push(node);
 }
 
-int main()
+int main()//driver function 
 {
     int i,op,result;
     char postfix[20];
