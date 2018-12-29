@@ -1,3 +1,9 @@
+/*
+Author @nimishbongale
+Version 1.0.1
+Date DD/MM/YYYY
+A program to demonstrate the basic functions of circular queue  
+*/
 #include<stdio.h> 
 #define SIZE 5
 
@@ -7,7 +13,7 @@ int myCQ[SIZE];
 int front=-1,rear = -1,element;
 
 
-void enQueue(int ele)
+void enQueue(int ele)//function to insert into the queue
 {
    	if((front == 0 && rear == SIZE - 1) || (front == rear+1))
     printf("Queue is full!");
@@ -24,7 +30,7 @@ void enQueue(int ele)
    }
 }   
       
-void deQueue()
+void deQueue()//delete from queue
 {
     
     if(front == -1)
@@ -42,7 +48,7 @@ void deQueue()
     }
 }
 
-void display()
+void display()//to print content of queue
 {
     	int i;
         printf("Current Queue:-\n");
@@ -64,7 +70,7 @@ void display()
 
 
 
-int main()
+int main()//driver function 
 {
     int ch;
    	while(1)
