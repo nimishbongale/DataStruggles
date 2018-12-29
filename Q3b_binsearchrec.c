@@ -1,8 +1,14 @@
+/*
+Author @nimishbongale
+Version 1.0.4
+Date DD/MM/YYYY
+A program which performs binary search  
+*/
 #include <stdio.h>
 
 int m;
 
-void binsearch(int a[],int l,int u,int ele)
+void binsearch(int a[],int l,int u,int ele)//recursive function to perform binary search 
 {
 	m=(l+u)/2;
 	if(a[m]==ele)
@@ -21,13 +27,13 @@ void binsearch(int a[],int l,int u,int ele)
 	binsearch(a,l,m,ele);
 }
 
-int main()
+int main()//driver function 
 {
 	int n,num,i;
 	printf("Enter the no. of elements: ");
 	scanf("%d",&num);
 	int b[num];
-	printf("Enter the sorted array\n");
+	printf("Enter the sorted array\n");//accepting input
 	for(i=0;i<num;i++)
 	scanf("%d",&b[i]);
 	printf("Enter the element to be searched for: ");
