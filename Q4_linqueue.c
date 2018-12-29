@@ -1,10 +1,16 @@
+/*
+Author @nimishbongale
+Version 1.0.1
+Date DD/MM/YYYY
+A program which demontrates the basic functionality of linear queues  
+*/
 #include <stdio.h>
 #define SIZE 5 
 
 int myQ[SIZE];
 int element,front=-1,rear=-1;
 
-void enQueue(int ele)
+void enQueue(int ele)//Entering into queue
 {
   
     if(rear == SIZE-1) 
@@ -17,7 +23,7 @@ void enQueue(int ele)
     }
 }
 
-void deQueue()
+void deQueue()//deleting from the queue
 {
     if(front == -1 || front > rear) 
 	printf("Queue is empty!");
@@ -25,7 +31,7 @@ void deQueue()
     printf("Element deleted:%d",myQ[front++]);
 }
 
-void display()
+void display()//printing the queue
 {
 		int i;
    		printf("\nCurrent Queue:\n");
@@ -33,10 +39,10 @@ void display()
         printf("%d\t", myQ[i]);
 }
 
-int main()
+int main()//driver function 
 {
     int ch;
-   	while(1)
+   	while(1)//loop to run as long as the user wants to terminate
 	   {
         printf("\n*****MENU ******\n1. Insert\n2. Delete\n3. Display\nEnter anything else to exit:");
         scanf("%d",&ch);
