@@ -1,13 +1,19 @@
+/*
+Author @nimishbongale
+Version 1.0.2
+Date DD/MM/YYYY
+A program which demonstrates the concept of singly linked list    
+*/
 #include<stdio.h>
 #include<stdlib.h>
 
-struct node
+struct node//declaring the structure 
 {
 	int data;
 	struct node *link;
 }*head=NULL,*ptr,*p;
 
-struct node* createNode()
+struct node* createNode()//function to return the created node
 {
 	struct node *newNode=(struct node*)malloc(sizeof(struct node));
 	if(newNode==NULL)
@@ -23,7 +29,7 @@ struct node* createNode()
 	}
 	return newNode;
 }
-
+//functions to insert data into various locations 
 void InsertBegin()
 {
 	ptr=createNode();
@@ -55,6 +61,7 @@ void InsertMiddle(int ele)
 	}
 }
 
+//functions to delete data from various locations
 void DeleteBegin()
 {
 	p=head;
@@ -99,6 +106,7 @@ void DeleteMiddle(int ele)
 	}
 }
 
+//function to print linked list 
 void display()
 {
 	p=head;
@@ -109,7 +117,7 @@ void display()
 	}
 }
 
-int main()
+int main()//driver function 
 {
 	int ch,d;
 	while(1)
