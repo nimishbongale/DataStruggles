@@ -1,12 +1,28 @@
+/*
+Author @nimishbongale
+Version 1.0.3
+Date DD/MM/YYYY
+A program which converts infix expresion to postfix 
+*/
+
 #include <ctype.h>
 #include <stdio.h>
 
 #define size 50
 
 int top,ob,cb,op,od,flag;
-char s[size],infix[size],postfix[size];
+/* top  is a stack pointer
+ob counts opening brackets
+cb counts cloing brackets
+op counts operators
+od counts operands*/
 
-void push(char item)
+char s[size],infix[size],postfix[size];
+/* infix is the input expression array
+s is the stack
+postfix stores resultant expression*/
+
+void push(char item)// funtion to enter data
 {
 	if(top==(size-1))
 	printf("Overflow");
@@ -14,7 +30,7 @@ void push(char item)
 	s[++top]=item; 
 }
 
-int pop()
+int pop()// funtion to delete data
 {
 	if(top==-1)
 	{
@@ -25,7 +41,7 @@ int pop()
 	return s[top--];
 } 
  
-int priority(char symbol)
+int priority(char symbol)// function to find priority
 {
 	switch(symbol)
 	{
@@ -45,7 +61,7 @@ int priority(char symbol)
 	
 }
 
-void inftopof()
+void inftopof()// actual funtion to convert 
 {
 	int i=0,j=0;
 	push('#');
@@ -92,7 +108,7 @@ void inftopof()
 	postfix[j]='\0';
 }
 
-int main()
+int main()// driver function 
 {
 	top=-1;ob=0;cb=0;op=0;od=0;flag=0;
   	printf("Enter a valid infix expression\n");
