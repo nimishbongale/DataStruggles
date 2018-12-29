@@ -1,3 +1,9 @@
+/*
+Author @nimishbongale
+Version 1.0.1
+Date DD/MM/YYYY
+A program which evauates a postfix expression  
+*/
 #include <stdio.h>
 #include <string.h>
 #include <math.h>
@@ -8,8 +14,9 @@
 int stack[SIZE];
 char user[SIZE];
 int top=0,flag=0;
+//top is a stack pointer
 
-int pop()
+int pop()// funtion to delete from stack
 {
 	if(top<0)
 	{
@@ -19,7 +26,7 @@ int pop()
 	return stack[--top];
 }
 
-void push(int n)
+void push(int n)// function to insert in stack
 {
 	if(top<(SIZE-1))
 	stack[top++]=n;
@@ -29,7 +36,7 @@ void push(int n)
 	}
 }
 
-int main()
+int main()// driver function 
 {
 	int i=0,cn=0,pop1=0,pop2=0,k=0;
 	char input;
