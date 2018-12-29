@@ -1,14 +1,20 @@
+/*
+Author @nimishbongale
+Version 1.0.1
+Date DD/MM/YYYY
+A program which demonstrates the concept of double linked list   
+*/
 #include <stdio.h>
 #include <stdlib.h>
 
-struct node
+struct node//declaring the structure
 {
     struct node *prev;
     int number;
     struct node *next;
 }*head=NULL,*newNode=NULL,*tail=NULL,*sptr=NULL,*p=NULL, *after=NULL, *before=NULL;
 
-struct node* createNewNode()
+struct node* createNewNode()//returning the new created node
 {
     int data;
     newNode=(struct node*)malloc(sizeof(struct node));
@@ -23,7 +29,7 @@ struct node* createNewNode()
     return newNode;
 }
 
-struct node * mysearch(int data)
+struct node * mysearch(int data)//function to search for given element 
 {
 	for(p=head;p!=NULL;p=p->next)
 	if(p->number==data)
@@ -31,6 +37,7 @@ struct node * mysearch(int data)
     return NULL;
 }
 
+//functions to insert at various locations 
 void insertBegin()
 {
 	newNode=createNewNode();
@@ -94,6 +101,7 @@ void insertAfter(int ele)
     
 }
 
+//function to print the DLL
 void display()
 {
     p=head;
@@ -102,6 +110,7 @@ void display()
     printf("%d->", p->number);
 }
 
+//functions to delete from DLL
 void deleteBegin()
 {
 	if(head==NULL)
@@ -150,7 +159,7 @@ void deleteMid(int key)
 	}
 }
 
-int main()
+int main()//driver function 
 {
     int ch,data;
     while (1)
