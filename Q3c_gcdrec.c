@@ -1,3 +1,9 @@
+/*
+Author @nimishbongale
+Version 1.0.2
+Date DD/MM/YYYY
+A program which finds the gcd of two numbers  
+*/
 #include <stdio.h>
 
 int gcd=1;
@@ -11,12 +17,12 @@ void findgcd(int a,int b,int n)
 	{
 		printf("GCD=%d",gcd);
 		return;
-	}
+	}//printing and terminating the function calls
 	
 	findgcd(a,b,n+1);
 }
 
-int main()
+int main()//driver function 
 {
 	int c,d;
 	printf("Enter the 2 no.s\n");
