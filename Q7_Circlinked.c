@@ -1,13 +1,19 @@
+/*
+Author @nimishbongale
+Version 1.0.2
+Date DD/MM/YYYY
+A program which demonstrates the concept of circular linked list   
+*/
 #include<stdio.h>
 #include<stdlib.h>
 
-struct node
+struct node//declaring the structure 
 {
 	int data;
 	struct node *link;
 }*front=NULL,*head=NULL,*tail=NULL,*ptr,*p;
 
-struct node* createNode()
+struct node* createNode()//returning the created node
 {
 	struct node *newNode=(struct node*)malloc(sizeof(struct node));
 	if(newNode==NULL)
@@ -24,6 +30,7 @@ struct node* createNode()
 	return newNode;
 }
 
+//functions to insert at various locations 
 void InsertBegin()
 {
 	ptr=createNode();
@@ -70,6 +77,7 @@ void InsertMiddle(int ele)
 	}
 }
 
+//functions to delete at various locaions 
 void DeleteBegin()
 {
 	if(head==NULL)
@@ -131,7 +139,7 @@ void DeleteMiddle(int ele)
 	}
 }
 
-void display()
+void display()//printing the circular linked ist
 {
 	p=head;
 	if(p!=NULL)
@@ -144,7 +152,7 @@ void display()
 	}
 }
 
-int main()
+int main()//driver function 
 {
 	int ch,d;
 	while(1)
