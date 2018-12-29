@@ -1,8 +1,14 @@
+/*
+Author @nimishbongale
+Version 1.0.1
+Date DD/MM/YYYY
+A program which evauates a postfix expression  
+*/
 #include <stdio.h>
 
-int step=0; 
+int step=0;// global var to count steps 
 
-void MoveTower(int n, char source,char dest,char temp)
+void MoveTower(int n, char source,char dest,char temp)//recursive function to solve TOH problem 
 {
    
     if(n==1) 
@@ -18,7 +24,7 @@ void MoveTower(int n, char source,char dest,char temp)
         MoveTower(n-1, temp, dest, source);
 }
                
-int main()
+int main()//driver function 
 {
 			int num;
             printf("Enter the number of disks: ");
