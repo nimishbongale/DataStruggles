@@ -1,14 +1,20 @@
+/*
+Author @nimishbongale
+Version 1.0.2
+Date DD/MM/YYYY
+A program which demonstrates the basic concept of binary trees  
+*/
 #include<stdio.h>
 #include<stdlib.h>
 
-struct node 
+struct node //declaring a structure
 { 
      int data; 
      struct node* left; 
      struct node* right; 
 }*root=NULL; 
 
-void display()
+void display()//printing the entire tree
 {
 	printf("\nPreorder traversal of binary tree is \n"); 
      printPreorder(root); 
@@ -21,7 +27,7 @@ void display()
   
 }
 
-struct node* newNode(int data) 
+struct node* newNode(int data) //to create and return the newnode
 { 
      struct node* node = (struct node*)malloc(sizeof(struct node)); 
      node->data = data; 
@@ -31,7 +37,7 @@ struct node* newNode(int data)
      return(node); 
 } 
   
-void printPostorder(struct node* node) 
+void printPostorder(struct node* node) //print in potorder format
 { 
      if (node == NULL) 
         return; 
@@ -40,7 +46,7 @@ void printPostorder(struct node* node)
      printf("%d ", node->data); 
 } 
 
-void printInorder(struct node* node) 
+void printInorder(struct node* node) //print in inorder format
 { 
      if (node == NULL) 
           return; 
@@ -49,7 +55,7 @@ void printInorder(struct node* node)
      printInorder(node->right); 
 } 
 
-void printPreorder(struct node* node) 
+void printPreorder(struct node* node) //print in preorder format
 { 
      if (node == NULL) 
           return; 
@@ -58,7 +64,7 @@ void printPreorder(struct node* node)
      printPreorder(node->right); 
 }     
 
-struct node* insert(struct node* node, int key) 
+struct node* insert(struct node* node, int key) //insert into Binary tree
 { 
 	char ch;
     if (node == NULL) return newNode(key); 
@@ -73,7 +79,7 @@ struct node* insert(struct node* node, int key)
   return node; 
 } 
 
-int main() 
+int main() //driver function 
 { 
     int a,ch;
 	struct node *ptr;
