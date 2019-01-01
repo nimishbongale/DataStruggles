@@ -1,7 +1,7 @@
 /*
 Author @nimishbongale
 Version 1.0.1
-Date DD/MM/YYYY
+Date 03/10/2018
 A program which demontrates the basic functionality of linear queues  
 */
 #include <stdio.h>
