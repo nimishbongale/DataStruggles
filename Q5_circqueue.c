@@ -1,7 +1,7 @@
 /*
 Author @nimishbongale
 Version 1.0.1
-Date DD/MM/YYYY
+Date 10/10/2018
 A program to demonstrate the basic functions of circular queue  
 */
 #include<stdio.h> 
