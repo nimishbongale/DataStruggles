@@ -1,7 +1,7 @@
 /*
 Author @nimishbongale
 Version 1.0.2
-Date DD/MM/YYYY
+Date 26/09/2018
 A program which finds the gcd of two numbers  
 */
 #include <stdio.h>
