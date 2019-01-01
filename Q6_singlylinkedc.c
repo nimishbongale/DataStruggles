@@ -1,7 +1,7 @@
 /*
 Author @nimishbongale
 Version 1.0.2
-Date DD/MM/YYYY
+Date 17/10/2018
 A program which demonstrates the concept of singly linked list    
 */
 #include<stdio.h>
