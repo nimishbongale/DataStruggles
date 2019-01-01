@@ -1,7 +1,7 @@
 /*
 Author @nimishbongale
 Version 1.0.3
-Date DD/MM/YYYY
+Date 25/11/2018
 A program which performs insertion in a sorted DLL  
 */
 #include<stdio.h>
