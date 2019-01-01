@@ -1,7 +1,7 @@
 /*
 Author @nimishbongale
 Version 1.0.2
-Date DD/MM/YYYY
+Date 21/11/2018
 A program which forms and evaluates an expression tree  
 */
 #include<stdio.h>
