@@ -1,7 +1,7 @@
 /*
 Author @nimishbongale
 Version 1.0.4
-Date DD/MM/YYYY
+Date 14/11/2018
 A program which demonstrates the concept of Binary Search Tree  
 */
 #include<stdio.h>
