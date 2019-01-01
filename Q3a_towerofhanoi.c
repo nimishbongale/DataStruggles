@@ -1,8 +1,8 @@
 /*
 Author @nimishbongale
-Version 1.0.1
-Date DD/MM/YYYY
-A program which solve the TOH problem  
+Version 1.0.2
+Date 03/10/2018
+A program which solves the TOH problem  
 */
 #include <stdio.h>
 
