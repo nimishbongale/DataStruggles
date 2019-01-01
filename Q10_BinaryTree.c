@@ -1,7 +1,7 @@
 /*
 Author @nimishbongale
 Version 1.0.2
-Date DD/MM/YYYY
+Date 26/10/2018
 A program which demonstrates the basic concept of binary trees  
 */
 #include<stdio.h>
