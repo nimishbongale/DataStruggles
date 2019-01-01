@@ -1,7 +1,7 @@
 /*
 Author @nimishbongale
 Version 1.0.4
-Date DD/MM/YYYY
+Date 26/09/2018
 A program which performs binary search  
 */
 #include <stdio.h>
